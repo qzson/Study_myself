@@ -1,0 +1,14 @@
+## Ignore File ##
+
+*.h5
+*.hdf5
+*.csv
+*.jpg
+*.npy
+*.png
+*.model
+*.dat
+*.pyc
+*.json
+Deep_Learning_textbook/*
+.ipynb_checkpoints/*
