@@ -1,8 +1,8 @@
-## 001_Data_split
+## d1_data
 - Train test split
 - K - fold
 
-## 002_Python
+## p2
 - If 문
 - Whlie 문
 - For 문
@@ -11,10 +11,10 @@
   - list 안의 list 루프
   - dictionary 형의 루프
 
-## 003_Python
+## p3
 - 리스트형
 - 딕셔너리형
 
-## 004_Python_function
+## p4_function
 - 내장함수와 메서드
 - 함수
