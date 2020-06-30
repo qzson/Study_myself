@@ -11,5 +11,5 @@
 *.pyc
 *.json
 Deep_Learning_textbook/*
+.ipynb_checkpoints/
 .ipynb_checkpoints/*
-Coding_Test_Study/.jpynb_checkpoints/
