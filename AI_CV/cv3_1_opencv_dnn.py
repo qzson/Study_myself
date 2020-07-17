@@ -8,7 +8,7 @@ import numpy as np
 model_name = './AI_CV/source/res10_300x300_ssd_iter_140000.caffemodel'     # 모델 (w값 , layer값) 300x300의 이미지
 prototxt_name = './AI_CV/source/deploy.prototxt.txt'                       # caffemodel 모델의 설계도
 min_confidence = 0.3
-file_name= './AI_CV/source/opencv_dnn_202005/image/soccer_02.jpg'
+file_name= './AI_CV/source/opencv_dnn_202005/image/marathon_01.jpg'
 
 def detectAndDisplay(frame):
     # pass the blob through the model and obtain the detections
