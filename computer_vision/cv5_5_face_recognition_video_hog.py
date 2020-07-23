@@ -1,7 +1,6 @@
 # 20-07-21
 # 5-5. 얼굴 인식(Face recognition) video 최적화
 
-
 import cv2
 import face_recognition
 import pickle
