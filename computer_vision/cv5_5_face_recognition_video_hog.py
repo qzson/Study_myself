@@ -14,6 +14,7 @@ unknown_name = 'Unknown'
 model_method = 'hog'
 output_name = './AI_CV/source/output_' + model_method + '.avi'
 
+
 def detectAndDisplay(image):
     start_time = time.time()
     rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
