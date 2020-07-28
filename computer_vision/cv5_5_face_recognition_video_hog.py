@@ -7,6 +7,7 @@ import face_recognition
 import pickle
 import time
 
+
 file_name = './AI_CV/source/opencv_dnn_202005/video/son_02.mp4'
 encoding_file = 'encodings.pickle'
 unknown_name = 'Unknown'
