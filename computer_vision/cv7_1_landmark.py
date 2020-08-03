@@ -1,4 +1,4 @@
-# landmark
+# landmark 특징점 표시
 
 import numpy as np
 import dlib
@@ -14,22 +14,32 @@ ALL = list(range(0, 68))
 EYES = list(range(36, 48))
 
 predictor_file = './computer_vision/source/ai_cv/model/shape_predictor_68_face_landmarks.dat'
-image_file = './computer_vision/source/ai_cv/image/marathon_03.jpg'
+image_file = './computer_vision/source/pj/image/train/train_1.jpg'
 
 detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor(predictor_file)
 
 image = cv2.imread(image_file)
+
+# 채널을 단순화 시켜서 인식률을 높인다.
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
+# 디텍션하기 전에 옵스케일 1번을 한다
 rects = detector(gray, 1)
 print("Number of faces detected: {}".format(len(rects)))
+print(rects)
 
 
 for (i, rect) in enumerate(rects):
+    # print(i, rect)
     points = np.matrix([[p.x, p.y] for p in predictor(gray, rect).parts()])
+    # print(points)
     show_parts = points[ALL]
+    # print(show_parts) # 각 점들의 좌표
+
     for (i, point) in enumerate(show_parts):
+        # print(i, point)
+        print(point[0,0], point[0,1])
         x = point[0,0]
         y = point[0,1]
         cv2.circle(image, (x, y), 1, (0, 255, 255), -1)
@@ -37,4 +47,4 @@ for (i, rect) in enumerate(rects):
 		cv2.FONT_HERSHEY_SIMPLEX, 0.3, (0, 255, 0), 1)
 
 cv2.imshow("Face Landmark", image)
-cv2.waitKey(0)   
+cv2.waitKey(0)
